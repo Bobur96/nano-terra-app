@@ -1,29 +1,52 @@
-import { Layout, Menu, theme } from 'antd';
-import { sidebarItems } from '../../config/constants';
-import { useNavigate } from 'react-router-dom';
+import { Layout, Menu, theme } from "antd";
+import { sidebarItems } from "../../config/constants";
+import { useNavigate } from "react-router-dom";
+import logo2 from "../../icons/logo_2.png";
+import "./sidebar.css";
+
 const { Sider } = Layout;
 
 const Sidebar = (props: any) => {
-
-  const {collapsed, selectedKeys } = props
-  const { token: { colorBgContainer }} = theme.useToken();
+  const { collapsed, selectedKeys } = props;
+  const {
+    token: { colorBgContainer },
+  } = theme.useToken();
   const navigate = useNavigate();
 
   return (
     <Sider
+      id="sidebar"
       trigger={null}
-      collapsible
+      collapsible width={280}
       collapsed={collapsed}
-      style={{ overflow: "auto", height: "100vh", background: colorBgContainer }}
+      style={{ background: colorBgContainer }}
     >
-      <div className="demo-logo-vertical" />
+      <div className="content">
+        <div className="side_top">
+          <img src={logo2} alt="logo" />
+          <span>Dashbord</span>
+        </div>
+        <div className="content_bottom">
+          <p>Main menu</p>
+          <Menu
+            onClick={(item) => navigate(item.key)}
+            defaultOpenKeys={["/"]}
+            mode="inline"
+            inlineCollapsed={collapsed}
+            selectedKeys={[selectedKeys]}
+            items={sidebarItems}
+          />
+        </div>
+      </div>
+
       <Menu
+        className="preference"
         onClick={(item) => navigate(item.key)}
         defaultOpenKeys={["/"]}
         mode="inline"
         inlineCollapsed={collapsed}
         selectedKeys={[selectedKeys]}
-        items={sidebarItems}
+        items={[{ key: "/settings", label: "Settings" }]}
       />
     </Sider>
   );
