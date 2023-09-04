@@ -1,5 +1,7 @@
+import TasksPageComponent from "../page-component/tasks-page-component/tasks-page-component";
+
 const Tasks = () => {
-  return <div>Tasks</div>;
+  return <TasksPageComponent/>;
 };
 
 export default Tasks;

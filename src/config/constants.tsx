@@ -8,6 +8,9 @@ import {
   LogoutOutlined,
 } from "@ant-design/icons";
 import { ReactComponent as Document } from "../icons/document.svg";
+import EditButton from "../components/editButton/editButton";
+import { ColumnsType } from "antd/es/table";
+
 
 export const sidebarItems = [
   [
@@ -47,9 +50,142 @@ export const sidebarItems = [
   ],
 ];
 
+// EMPLOYEEE
+
 export const employeeItem = [
   { title: "All", number: 20, active: true },
   { title: "Lorem ipsum", number: 12, active: false },
   { title: "Lorem ipsum", number: 12, active: false },
   { title: "Lorem ipsum", number: 12, active: false },
 ];
+
+export interface EmployeeDataType {
+  key: React.Key;
+  legends: string;
+  user: string;
+  type: string;
+  description: string;
+  action: any;
+}
+
+export const employeColumns: ColumnsType<EmployeeDataType> = [
+  { title: 'Legends', dataIndex: 'legends' },
+  { title: 'User Legends', dataIndex: 'user' },
+  { title: 'Type', dataIndex: 'type' },
+  { title: 'Description', dataIndex: 'description' },
+  { title: '', dataIndex: 'action' },
+];
+
+export const employeData: EmployeeDataType[] = [
+  {
+    key: '1',
+    legends: 'legend',
+    user: 'User Legend',
+    type: 'type',
+    description: 'description',
+    action: <EditButton/>,
+  },
+  {
+    key: '2',
+    legends: 'legend',
+    user: 'User Legend',
+    type: 'type',
+    description: 'description',
+    action: <EditButton/>,
+  },
+  {
+    key: '3',
+    legends: 'legend',
+    user: 'User Legend',
+    type: 'type',
+    description: 'description',
+    action: <EditButton/>,
+  },
+  {
+    key: '4',
+    legends: 'legend',
+    user: 'User Legend',
+    type: 'type',
+    description: 'description',
+    action: <EditButton/>,
+  },
+];
+
+// EMPLOYEEE
+
+
+// TASK
+
+export const tasksButtonItems = [
+  { title: "1-vazifa", number: 20, active: true },
+  { title: "2-vazifa", number: 12, active: false },
+  { title: "3-vazifa", number: 12, active: false },
+  { title: "4-vazifa", number: 12, active: false },
+];
+
+export interface TasksDataType {
+  key: React.Key;
+  ifo: string;
+  xiz: string;
+  bir: string;
+  ikki: string;
+  uch: string;
+  tort: string;
+  besh: string;
+}
+
+export const tasksColumns: ColumnsType<TasksDataType> = [
+  { title: 'IFO', dataIndex: 'ifo' },
+  { title: `Хизматга чиққан кун / Патруллик йўналишида хизмат олиб борилган кун`, dataIndex: 'xiz' },
+  { title: '1.1', dataIndex: 'bir' },
+  { title: '1.2', dataIndex: 'ikki' },
+  { title: '1.3', dataIndex: 'uch' },
+  { title: '1.4', dataIndex: 'tort' },
+  { title: '1.5', dataIndex: 'besh' },
+];
+
+export const tasksData: TasksDataType[] = [
+  {
+    key: '1',
+    ifo: '1-гр. ком. Ж.Ахранов',
+    xiz: '31 / 28',
+    bir: '20,0 / 28',
+    ikki: '20,0 / 28',
+    uch: '20,0 / 28',
+    tort: '20,0 / 28',
+    besh: '20,0 / 28'
+  },
+  {
+    key: '2',
+    ifo: '1-гр. ком. Ж.Ахранов',
+    xiz: '31 / 28',
+    bir: '20,0 / 28',
+    ikki: '20,0 / 28',
+    uch: '20,0 / 28',
+    tort: '20,0 / 28',
+    besh: '20,0 / 28'
+  },
+  {
+    key: '3',
+    ifo: '1-гр. ком. Ж.Ахранов',
+    xiz: '31 / 28',
+    bir: '20,0 / 28',
+    ikki: '20,0 / 28',
+    uch: '20,0 / 28',
+    tort: '20,0 / 28',
+    besh: '20,0 / 28'
+  },
+  {
+    key: '4',
+    ifo: '1-гр. ком. Ж.Ахранов',
+    xiz: '31 / 28',
+    bir: '20,0 / 28',
+    ikki: '20,0 / 28',
+    uch: '20,0 / 28',
+    tort: '20,0 / 28',
+    besh: '20,0 / 28'
+  },
+
+];
+
+// TASK

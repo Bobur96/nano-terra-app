@@ -39,3 +39,7 @@ button {
 p {
   margin-bottom: 0;
 }
+
+th {
+  max-width: 140px !important;
+}

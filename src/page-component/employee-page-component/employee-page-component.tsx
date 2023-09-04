@@ -1,11 +1,13 @@
+import { EmployeeDataType, employeeItem, employeColumns, employeData } from "../../config/constants";
 import HeadBtn from "../../components/headBtn/headBtn";
 import Button from "../../components/menuBtn/menuBtn";
-import { employeeItem } from "../../config/constants";
 import filter from "../../icons/filter.svg";
-import add from "../../icons/add.svg";
-import "./employee.css";
 import { styled } from "styled-components";
-import EmployeeTable from "../../components/employeeTable/employeeTable";
+import add from "../../icons/add.svg";
+import { Table } from 'antd';
+import "./employee.css";
+
+const rowSelection = { getCheckboxProps: (record: EmployeeDataType) => ({}) }
 
 const EmployeePageComponent = () => {
 
@@ -59,7 +61,7 @@ const EmployeePageComponent = () => {
           </div>
         </div>
         <div className="table">
-          <EmployeeTable/>
+          <Table rowSelection={{...rowSelection}} columns={employeColumns} dataSource={employeData} />
         </div>
       </div>
     </div>
