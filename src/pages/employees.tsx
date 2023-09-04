@@ -1,5 +1,7 @@
+import EmployeePageComponent from "../page-component/employee-page-component/employee-page-component";
+
 const Employees = () => {
-  return <div>Employees</div>;
+  return <EmployeePageComponent />;
 };
 
 export default Employees;

@@ -34,7 +34,7 @@ const App: React.FC = () => {
       <Layout>
         <Navbar collapsed={collapsed} setCollapsed={setCollapsed} />
 
-        <Content style={{ margin: "24px 20px 16px 20px", padding: 24, minHeight: 280, background: colorBgContainer}}>
+        <Content style={{ margin: "24px 20px 16px 20px", height: "92vh", overflowY: "auto", background: '#f6f6f6'}}>
           
           <Routes>
             <Route path="/" element={<Document />} />

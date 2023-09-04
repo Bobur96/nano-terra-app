@@ -1,0 +1,47 @@
+.employees {
+  width: 100%;
+}
+
+.employees .btn_group {
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 16px;
+  flex: 1 0 0;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.employees .contents {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  border-radius: 8px;
+  background: var(--white, #fff);
+  box-shadow: 0px 4px 24px 0px rgba(40, 53, 58, 0.02);
+}
+.employees .top_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+.employees .top_btns {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.employees .btns {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+}
+.employees input::placeholder {
+  color: var(--gray-300, #D0D5DD);
+  font-size: 17px;
+  font-weight: 500;
+}

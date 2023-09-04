@@ -36,17 +36,17 @@
   align-self: stretch;
   border-radius: 0 !important;
   color: var(--gray-600, #475467);
-  /* font-weight: 500; */
+  font-weight: 500;
   font-size: 17px;
 }
 .ant-menu-item-selected {
-  color: var(--primary-500, #4623E9) !important;
-  background: var(--primary-25, #F7F5FD) !important;
+  color: var(--primary-500, #4623e9) !important;
+  background: var(--primary-25, #f7f5fd) !important;
 }
 #sidebar p {
   color: var(--gray-400, #98a2b3);
   text-align: justify;
-  font-size: 14px;  
+  font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -74,8 +74,9 @@
   gap: 32px;
   align-self: stretch;
 }
-#sidebar .preference {
-  position: sticky;
+.side_bottom {
+  position: absolute;
+  width: 90%;
   bottom: 0;
   display: flex;
   flex-direction: column;

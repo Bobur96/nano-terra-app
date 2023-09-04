@@ -34,20 +34,25 @@ const Sidebar = (props: any) => {
             mode="inline"
             inlineCollapsed={collapsed}
             selectedKeys={[selectedKeys]}
-            items={sidebarItems}
+            items={sidebarItems[0]}
           />
         </div>
       </div>
 
-      <Menu
-        className="preference"
-        onClick={(item) => navigate(item.key)}
-        defaultOpenKeys={["/"]}
-        mode="inline"
-        inlineCollapsed={collapsed}
-        selectedKeys={[selectedKeys]}
-        items={[{ key: "/settings", label: "Settings" }]}
-      />
+      <div className="side_bottom">
+        <div className="content_bottom">
+          <p>Performances</p>
+          <Menu
+            className="preference"
+            onClick={(item) => navigate(item.key)}
+            defaultOpenKeys={["/"]}
+            mode="inline"
+            inlineCollapsed={collapsed}
+            selectedKeys={[selectedKeys]}
+            items={sidebarItems[1]}
+          />
+        </div>
+      </div>
     </Sider>
   );
 };
