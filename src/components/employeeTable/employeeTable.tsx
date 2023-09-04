@@ -1,5 +1,6 @@
 import { Table } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
+import EditButton from '../editButton/editButton';
 
 interface DataType {
   key: React.Key;
@@ -40,7 +41,7 @@ const data: DataType[] = [
     user: 'User Legend',
     type: 'type',
     description: 'description',
-    action: 'aaa',
+    action: <EditButton/>,
   },
   {
     key: '2',
@@ -48,7 +49,7 @@ const data: DataType[] = [
     user: 'User Legend',
     type: 'type',
     description: 'description',
-    action: 'aaa',
+    action: <EditButton/>,
   },
   {
     key: '3',
@@ -56,7 +57,7 @@ const data: DataType[] = [
     user: 'User Legend',
     type: 'type',
     description: 'description',
-    action: 'aaa',
+    action: <EditButton/>,
   },
   {
     key: '4',
@@ -64,7 +65,7 @@ const data: DataType[] = [
     user: 'User Legend',
     type: 'type',
     description: 'description',
-    action: 'aaa',
+    action: <EditButton/>,
   },
 ];
 
