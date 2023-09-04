@@ -25,6 +25,7 @@ const KpiCard = ({ title, num, type, desc, num2, icon }: KpiCardProps) => {
     gap: 16px;
     flex: 1 0 0;
 
+    font-size: '16px';
     align-self: stretch;
     color: var(--secondary-500, #1A202C);
     text-align: justify;
@@ -44,8 +45,8 @@ const KpiCard = ({ title, num, type, desc, num2, icon }: KpiCardProps) => {
     <Main>
       <Left>
         <span>{title}</span>
-        <span>{num} %</span>
-        <span>{desc}</span>
+        <div style={{color: '#90A3BF'}}><span style={{color: '#1A202C', fontSize: '24px'}}>{num} </span>{type}</div>
+        <div style={{fontSize: '12px', color: '#90A3BF'}}><span style={{color: "#7FB519"}}>{num2} </span>{desc}</div>
       </Left>
       <Right>
         <img src={icon} alt={title} />

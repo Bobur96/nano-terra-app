@@ -189,3 +189,19 @@ export const tasksData: TasksDataType[] = [
 ];
 
 // TASK
+
+// USER INFO
+
+export const userInfoItem = [
+  { id: 1, title: "Ҳудуд:", value: "Андижон" },
+  { id: 2, title: "Туман (шаҳар):", value: "Андижон ш." },
+  { id: 3, title: "Маҳалла:", value: "Андижон МФЙ" },
+  { id: 4, title: "Лавозими:", value: "Инспектор" },
+  { id: 5, title: "Унвони:", value: "Капитан" },
+  { id: 6, title: "Туғилган санаси:", value: "12.01.1980" },
+  { id: 7, title: "Телефон рақами:", value: "+99890 123-45-67" },
+  { id: 8, title: "Паспорт серия ва рақами:", value: "АА 1234567" },
+  { id: 9, title: "Гувоҳнома рақами:", value: "123456789" },
+]
+
+// USER INFO

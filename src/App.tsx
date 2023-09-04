@@ -30,11 +30,9 @@ const App: React.FC = () => {
   return auth ? (
     <Layout>
       <Sidebar collapsed={collapsed} selectedKeys={selectedKeys} />
-
       <Layout>
         <Navbar collapsed={collapsed} setCollapsed={setCollapsed} />
-
-        <Content style={{ margin: "24px 20px 16px 20px", height: "92vh", overflowY: "auto", background: '#f6f6f6'}}>
+        <Content style={{ margin: "24px 20px 16px 20px", height: "80vh", overflowY: "auto", background: '#f6f6f6'}}>
           
           <Routes>
             <Route path="/" element={<Document />} />
