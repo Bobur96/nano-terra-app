@@ -1,5 +1,7 @@
+import UserInfoComponent from "../page-component/user-info-component/user-info-component";
+
 const UserInfo = () => {
-  return <div>UserInfo</div>;
+  return <UserInfoComponent/>
 };
 
 export default UserInfo;
