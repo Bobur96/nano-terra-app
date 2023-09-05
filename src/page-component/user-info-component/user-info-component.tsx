@@ -3,9 +3,13 @@ import KpiCard from "../../components/kpi-card/kpi-card";
 import arrowUp from "../../icons/arrow-up.svg";
 import calendar from "../../icons/calendar-2.svg";
 import avatar from "../../icons/avatar.svg";
-import { userInfoItem } from "../../config/constants";
+import { infoChartDescription, userInfoItem } from "../../config/constants";
 import UserInfoItem from "../../components/user-info-item/user-info-item";
 import ChartHead from "../../components/chart-head/chart-head";
+import InfoChart from "../../components/charts/info-chart";
+import PieChart from "../../components/charts/pie-chart";
+import chartInfo from "../../icons/chart-info.svg";
+import ChartInfoDercription from "../../components/chart-info-description/chart-info-dercription";
 
 const UserInfoComponent = () => {
   const Main = styled.div`
@@ -105,6 +109,21 @@ const UserInfoComponent = () => {
     border-radius: 6px;
     background: var(--gray-50, #f9fafb);
   `;
+  const Items = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 17px;
+    align-self: stretch;
+  `;
+  const Center = styled.div`
+    display: grid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  `;
 
   return (
     <Main>
@@ -115,20 +134,32 @@ const UserInfoComponent = () => {
           </TopImg>
           <div style={{ width: "90%" }}>
             {userInfoItem.map((el) => (
-              <UserInfoItem key={el.id} title={el.title} value={el.value} grey={el.id % 2 == 1}/>
+              <UserInfoItem
+                key={el.id}
+                title={el.title}
+                value={el.value}
+                grey={el.id % 2 == 1}
+              />
             ))}
           </div>
         </Top>
         <Middle>
-          <ChartHead/>
+          <ChartHead />
+          <InfoChart />
         </Middle>
         <Bottom>
-          <ChartHead/>
+          <ChartHead />
+          <InfoChart />
         </Bottom>
       </Content>
       <LeftContent>
-        <KpiCard title="KPI кўрсаткичи" num="73" type="балл"
-          num2="20%" desc="ўтган ойга нисбатан" icon={arrowUp}
+        <KpiCard
+          title="KPI кўрсаткичи"
+          num="73"
+          type="балл"
+          num2="20%"
+          desc="ўтган ойга нисбатан"
+          icon={arrowUp}
         />
         <RightBotton>
           <Head>
@@ -138,6 +169,38 @@ const UserInfoComponent = () => {
               <img src={calendar} alt="calendar" />
             </Date>
           </Head>
+          <div style={{position: 'relative'}}>
+            <img src={chartInfo} alt="chart info" />
+            <Center>
+              <span
+                style={{
+                  fontSize: "16px",
+                  color: "var(--secondary-400, #596780)",
+                }}
+              >
+                Жами
+              </span>
+              <span
+                style={{
+                  fontSize: "24px",
+                  color: "var(--secondary-500, #1A202C)",
+                  fontWeight: "700",
+                }}
+              >
+                74,6
+              </span>
+            </Center>
+          </div>
+          <Items>
+            {infoChartDescription.map((el) => (
+              <ChartInfoDercription
+                key={el.color}
+                color={el.color}
+                title={el.title}
+                num={el.num}
+              />
+            ))}
+          </Items>
         </RightBotton>
       </LeftContent>
     </Main>

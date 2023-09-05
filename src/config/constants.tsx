@@ -204,4 +204,11 @@ export const userInfoItem = [
   { id: 9, title: "Гувоҳнома рақами:", value: "123456789" },
 ]
 
+export const infoChartDescription = [
+  { color: '#EB7CA6', title: '1-вазифа:', num: '78' },
+  { color: '#CC6FF8', title: '2-вазифа:', num: '15' },
+  { color: '#7C5CFC', title: '3-вазифа:', num: '131' },
+  { color: '#5CAFFC', title: '4-вазифа:', num: '174' },
+]
+
 // USER INFO
