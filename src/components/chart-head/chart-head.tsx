@@ -1,28 +1,8 @@
-import { styled } from "styled-components";
 import arrowLeft from '../../icons/arrow-left.svg'
 import arrowRight from '../../icons/arrow-right.svg'
+import { Buttons, Content, Title } from "./chart-head.styled";
 
 const ChartHead = () => {
-
-  const Content = styled.div`
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  `
-
-  const Title = styled.div`
-    color: var(--secondary-500, #1a202c);
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 150%;
-    letter-spacing: -0.32px;
-  `;
-  const Buttons = styled.div`
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    align-self: end;
-  `
 
   return (
     <Content>

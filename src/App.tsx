@@ -16,9 +16,7 @@ const { Content } = Layout;
 const App: React.FC = () => {
   const [auth, setAuth] = useState(true);
   const [collapsed, setCollapsed] = useState(false);
-  const {
-    token: { colorBgContainer },
-  } = theme.useToken();
+  const { token: { colorBgContainer } } = theme.useToken();
   const [selectedKeys, setSelectedKeys] = useState("/");
   const location = useLocation();
 

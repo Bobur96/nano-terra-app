@@ -1,5 +1,6 @@
-import { HeadBtnProps } from "./headBtn.props";
 import styled from "styled-components";
+import { HeadBtnProps } from "./headBtn.props";
+import { Icon } from "./headBtn.styled";
 
 const HeadBtn = ({ title, icon, active }: HeadBtnProps) => {
   const Button = styled.button`
@@ -20,14 +21,6 @@ const HeadBtn = ({ title, icon, active }: HeadBtnProps) => {
     text-overflow: ellipsis;
     font-size: 16px;
     line-height: normal;
-  `;
-
-  const Icon = styled.div`
-    display: flex;
-    width: 16px;
-    height: 16px;
-    justify-content: center;
-    align-items: center;
   `;
 
   return (

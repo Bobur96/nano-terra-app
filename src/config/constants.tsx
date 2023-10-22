@@ -212,3 +212,16 @@ export const infoChartDescription = [
 ]
 
 // USER INFO
+
+// USER KPI
+
+export const kpiCards = [
+  { num: 8, desc: 'Ходимлар сони штат бўйича' },
+  { num: 0, desc: 'Вакант' },
+  { num: 8, desc: 'Рўйхат бўйича' },
+  { num: 1, desc: 'Меҳнат таътилида' },
+  { num: 0, desc: 'Сабабли' },
+  { num: 0, desc: 'Сабабсиз' },
+]
+
+// USER KPI
