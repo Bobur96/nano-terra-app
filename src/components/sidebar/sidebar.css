@@ -20,17 +20,14 @@
 .content_bottom {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 14px;
   align-self: stretch;
 }
 .content_bottom span {
   margin: 0 !important;
-  margin-left: 2px !important;
 }
 .content_bottom li {
   display: flex;
-  padding: 10px 16px;
   align-items: center;
   gap: 14px;
   align-self: stretch;
@@ -76,7 +73,6 @@
 }
 .side_bottom {
   position: absolute;
-  width: 90%;
   bottom: 0;
   display: flex;
   flex-direction: column;

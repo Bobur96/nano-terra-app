@@ -8,9 +8,7 @@ const { Sider } = Layout;
 
 const Sidebar = (props: any) => {
   const { collapsed, selectedKeys } = props;
-  const {
-    token: { colorBgContainer },
-  } = theme.useToken();
+  const { token: { colorBgContainer } } = theme.useToken();
   const navigate = useNavigate();
 
   return (
@@ -24,10 +22,10 @@ const Sidebar = (props: any) => {
       <div className="content">
         <div className="side_top">
           <img src={logo2} alt="logo" />
-          <span>Dashbord</span>
+          { !collapsed && <span>Dashbord</span> }
         </div>
         <div className="content_bottom">
-          <p>Main menu</p>
+          { !collapsed && <p>Main menu</p> }
           <Menu
             onClick={(item) => navigate(item.key)}
             defaultOpenKeys={["/"]}
@@ -39,9 +37,9 @@ const Sidebar = (props: any) => {
         </div>
       </div>
 
-      <div className="side_bottom">
+      <div className="side_bottom" style={collapsed ? {width: "60%"} : {width: "88.4%"}}>
         <div className="content_bottom">
-          <p>Performances</p>
+          { !collapsed && <p>Performances</p> }
           <Menu
             className="preference"
             onClick={(item) => navigate(item.key)}

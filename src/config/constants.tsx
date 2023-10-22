@@ -7,7 +7,6 @@ import {
   SettingOutlined,
   LogoutOutlined,
 } from "@ant-design/icons";
-import { ReactComponent as Document } from "../icons/document.svg";
 import EditButton from "../components/editButton/editButton";
 import { ColumnsType } from "antd/es/table";
 
