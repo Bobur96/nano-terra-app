@@ -112,7 +112,6 @@ export const employeData: EmployeeDataType[] = [
 
 // EMPLOYEEE
 
-
 // TASK
 
 export const tasksButtonItems = [
